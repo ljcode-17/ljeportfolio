@@ -169,6 +169,32 @@ const projectsData = [
     learnings: 'Gained profound insight into the mechanics of suspense, cinematic pacing, and the importance of seamless continuity in visual storytelling.',
     link: 'https://youtu.be/fq0dhi5-kzE?si=kG5Lcys7_q1Kw1fa',
     linkText: 'Watch on YouTube'
+  },
+  {
+    id: 8,
+    title: 'JM & Laica Prenup Album',
+    category: 'Web',
+    tags: ['Web Application', 'Gallery', 'UI/UX'],
+    image: "/assets/projects/Jm&Laica.png",
+    desc: "A premium, responsive digital gallery application built with a modern web stack.",
+    problem: 'To serve as a dedicated digital album and gallery showcasing the prenup photo collection for Laica and JM.',
+    solution: 'Curates photos into distinct artistic concepts (such as Picnic, Roadside, Coastal, and Night City) rather than just functioning as a traditional event or story timeline, creating an immersive, premium viewing experience.',
+    features: [
+        'Elegant, editorial-style UI',
+        'Masonry gallery and cinematic sliding photo sections',
+        'Interactive backgrounds and romantic, airy spring aesthetic',
+        'Cohesive visual experience across all devices'
+    ],
+    tech: ['React (v19)', 'Vite', 'Tailwind CSS (v4)', 'Framer Motion', 'Lucide React', 'ESLint', 'PostCSS'],
+    role: 'Creator & Developer',
+    responsibilities: [
+        'Developed a premium, responsive digital gallery application',
+        'Built an elegant, editorial-style UI with modern web stack components',
+        'Curated photos into distinct artistic concepts'
+    ],
+    learnings: 'Created a cohesive visual experience across all devices and utilized a modern web stack including React v19 and Tailwind CSS v4.',
+    link: 'https://jm-laica051526-4-ever.vercel.app/',
+    linkText: 'Visit Gallery'
   }
 ];
 
