@@ -153,9 +153,10 @@ export default function Education() {
           }
 
           .education-entry {
-            grid-template-columns: 1fr !important;
-            gap: 0.9rem !important;
-            justify-items: center !important;
+            grid-template-columns: 78px 1fr !important;
+            gap: 0.85rem !important;
+            justify-items: start !important;
+            align-items: start !important;
           }
 
           .education-logo-card {
@@ -191,9 +192,14 @@ export default function Education() {
           }
 
           .education-logo-card {
-            width: 72px !important;
-            height: 72px !important;
+            width: 68px !important;
+            height: 68px !important;
             border-radius: 16px !important;
+          }
+
+          .education-entry {
+            grid-template-columns: 68px 1fr !important;
+            gap: 0.7rem !important;
           }
 
           .education-copy h3 {
