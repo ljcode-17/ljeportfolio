@@ -128,7 +128,7 @@ export default function Hero() {
             className="hero-stats"
           >
             <div>
-              <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--accent)' }}>1.54</div>
+              <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--accent)' }}>1.53</div>
               <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)', fontWeight: 500 }}>Current GPA</div>
             </div>
             <div>

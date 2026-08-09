@@ -3,18 +3,22 @@ import { motion } from 'framer-motion';
 
 const education = [
   {
+    logo: '/assets/schools/PUP.png',
     degree: "Bachelor of Science in Information Technology",
     school: "Polytechnic University of the Philippines – Lopez Campus",
-    period: "2022 – Present | Current GPA: 1.54",
+    period: "2022 – Present | Current GPA: 1.53",
     details: [
       "President’s Lister (2022 & 2025)",
       "Dean’s Lister (2022 – 2024)",
       "Academic Awardee (S.Y. 2022–2023)",
       "Academic Awardee (S.Y. 2023–2024)",
-      "Academic Awardee (S.Y. 2025–2026)"
+      "Academic Awardee (S.Y. 2025–2026)",
+      "1st Placer — Southern Tagalog Consortium for Industry, Energy, and Emerging Technology Research and Development (STCIEERD) — 2nd Undergraduate R&D Category (for capstone project MATHtatag)",
+      "2nd Placer — 7th Multi-Disciplinary In-House Review and Research Colloquium (PUP Lopez Campus), Architecture, Engineering & Technology Category (2026)"
     ]
   },
   {
+    logo: '/assets/schools/MUNHI.png',
     degree: "Senior High School",
     school: "Tagkawayan National High School",
     period: "2020 – 2022",
@@ -25,12 +29,14 @@ const education = [
     ]
   },
   {
+    logo: '/assets/schools/OLLA.png',
     degree: "Junior High School",
     school: "Our Lady of Lourdes Academy",
     period: "2016 – 2020",
     details: ["With Honors"]
   },
   {
+    logo: '/assets/schools/CENTRAL.png',
     degree: "Elementary & Kindergarten",
     school: "Tagkawayan Central Elementary School",
     period: "2009 – 2016",
@@ -52,8 +58,8 @@ export default function Education() {
           My <span style={{ color: 'var(--accent)' }}>Education</span>
         </h2>
         
-        <div style={{ position: 'relative' }}>
-          <div style={{ position: 'absolute', left: '20px', top: 0, bottom: 0, width: '2px', background: 'var(--border)' }} />
+        <div style={{ position: 'relative' }} className="education-timeline">
+          <div style={{ position: 'absolute', left: '20px', top: 0, bottom: 0, width: '2px', background: 'var(--border)' }} className="education-timeline-line" />
           
           {education.map((item, index) => (
             <motion.div
@@ -63,28 +69,142 @@ export default function Education() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
               style={{ position: 'relative', paddingLeft: '60px', marginBottom: '40px' }}
+              className="education-item"
             >
               <div style={{ 
                 position: 'absolute', left: '11px', top: 0, width: '20px', height: '20px', 
                 background: 'var(--bg)', border: '4px solid var(--accent)', borderRadius: '50%', zIndex: 1 
               }} />
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '4px', color: 'var(--text)' }}>{item.degree}</h3>
-              <h4 style={{ fontSize: '1rem', color: 'var(--accent)', marginBottom: '8px' }}>{item.school}</h4>
-              <p style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '12px' }}>{item.period}</p>
-              {item.details.length > 0 && (
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                  {item.details.map((detail, dIdx) => (
-                    <li key={dIdx} style={{ position: 'relative', paddingLeft: '20px', marginBottom: '8px', fontSize: '0.95rem', color: 'var(--text)' }}>
-                      <span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>&rarr;</span>
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: '88px 1fr',
+                gap: '1.25rem',
+                alignItems: 'start'
+              }} className="education-entry">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-80px' }}
+                  whileHover={{ scale: 1.03, y: -2 }}
+                  transition={{ duration: 0.45, ease: 'easeOut', delay: index * 0.08 }}
+                  style={{
+                    width: '88px',
+                    height: '88px',
+                    borderRadius: '18px',
+                    background: 'var(--card-bg)',
+                    border: '1px solid var(--border)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    overflow: 'hidden',
+                    boxShadow: '0 10px 25px rgba(0, 0, 0, 0.08)',
+                    transition: 'box-shadow 0.25s ease, border-color 0.25s ease'
+                  }}
+                  className="education-logo-card"
+                >
+                  <img
+                    src={item.logo}
+                    alt={`${item.school} logo`}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'contain',
+                      objectPosition: 'center',
+                      display: 'block',
+                      padding: '12px'
+                    }}
+                  />
+                </motion.div>
+
+                <div className="education-copy">
+                  <h3 style={{ fontSize: '1.25rem', marginBottom: '4px', color: 'var(--text)' }}>{item.degree}</h3>
+                  <h4 style={{ fontSize: '1rem', color: 'var(--accent)', marginBottom: '8px' }}>{item.school}</h4>
+                  <p style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '12px', overflowWrap: 'anywhere' }}>{item.period}</p>
+                  {item.details.length > 0 && (
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                      {item.details.map((detail, dIdx) => (
+                        <li key={dIdx} style={{ position: 'relative', paddingLeft: '20px', marginBottom: '8px', fontSize: '0.95rem', color: 'var(--text)', overflowWrap: 'anywhere' }}>
+                          <span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>&rarr;</span>
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
       </motion.div>
+      <style>{`
+        .education-logo-card:hover {
+          border-color: var(--accent) !important;
+          box-shadow: 0 14px 32px rgba(20, 184, 166, 0.16) !important;
+        }
+
+        @media (max-width: 768px) {
+          .education-timeline-line {
+            left: 16px !important;
+          }
+
+          .education-item {
+            padding-left: 46px !important;
+            margin-bottom: 28px !important;
+          }
+
+          .education-entry {
+            grid-template-columns: 1fr !important;
+            gap: 0.9rem !important;
+            justify-items: center !important;
+          }
+
+          .education-logo-card {
+            width: 78px !important;
+            height: 78px !important;
+          }
+
+          .education-copy {
+            width: 100% !important;
+          }
+
+          .education-copy h3 {
+            font-size: 1.1rem !important;
+          }
+
+          .education-copy h4 {
+            font-size: 0.95rem !important;
+          }
+
+          .education-copy p,
+          .education-copy li {
+            font-size: 0.9rem !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .education-item {
+            padding-left: 40px !important;
+          }
+
+          .education-timeline-line {
+            left: 14px !important;
+          }
+
+          .education-logo-card {
+            width: 72px !important;
+            height: 72px !important;
+            border-radius: 16px !important;
+          }
+
+          .education-copy h3 {
+            line-height: 1.25 !important;
+          }
+
+          .education-copy ul {
+            padding-top: 2px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
