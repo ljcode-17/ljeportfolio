@@ -29,6 +29,8 @@ const projectsData = [
         'Assisted in data management and Firebase integration'
     ],
     learnings: 'Gained hands-on experience in application logic, team collaboration, and the importance of accurate documentation and QA in a capstone project.',
+    link: 'https://youtu.be/57dUWe2xdW8?si=bLKdqaVKnmJc0cqk',
+    linkText: 'View Demo',
     docs: 'assets/docs/Group 1 Chapter 1-5 FINAL.pdf'
   },
   {
