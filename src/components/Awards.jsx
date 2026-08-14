@@ -5,7 +5,7 @@ const awards = [
   { icon: "🏆", title: "Academic Honors (2022 – Present)", desc: "President's Lister and consistent Dean's Lister at Polytechnic University of the Philippines." },
   { icon: "🎖️", title: "Research & Science Participation", desc: "Honored in Senior High School Research Congress (DLSU) and Divison S&T Fair (3rd Place)." },
   { icon: "🏅", title: "Academic Awardee", desc: "Recognized for consistent excellence during S.Y. 2022-2023, 2023-2024, and 2025-2026." },
-  { icon: "🥇", title: "1st Placer — Southern Tagalog Consortium for Industry, Energy, and Emerging Technology Research and Development (STCIEERD)", desc: "Won 1st Place (2nd Undergraduate R&D Category) for capstone research project “MATHtatag: A Mobile Application for Online Assessment and Performance Monitoring with Filipino Text-to-Speech for Grade 1 in Mathematics." },
+  { icon: "🥇", title: "1st Place — Southern Tagalog Consortium for Industry, Energy, and Emerging Technology Research and Development (STCIEERD)", desc: "\"MATHtatag\": Grade‑1 math assessment app with performance monitoring and Filipino text‑to‑speech. Event: Batangas State University, Alangilan Campus." },
   { icon: "🥈", title: "2nd Placer — 7th Multi-Disciplinary In-House Review and Research Colloquium (PUP Lopez Campus)", desc: "Awarded 2nd Place in the Architecture, Engineering, and Technology category (2026)." },
   { icon: "📜", title: "Capstone Recognition — MATHtatag", desc: "Recognized for the capstone research project MATHtatag for its innovation in educational assessment and accessibility." }
 ];

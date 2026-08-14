@@ -44,18 +44,37 @@ function App() {
             <div style={{ position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
               <motion.div
                 animate={{
-                  x: [0, 50, -50, 0],
-                  y: [0, -30, 30, 0],
+                  x: [0, 60, -60, 0],
+                  y: [0, -36, 36, 0],
                 }}
-                transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
                 style={{
                   position: 'absolute',
-                  top: '-10%',
-                  right: '-5%',
-                  width: '600px',
-                  height: '600px',
-                  background: 'radial-gradient(circle, rgba(20, 184, 166, 0.12) 0%, transparent 70%)',
-                  filter: 'blur(60px)',
+                  top: '-15%',
+                  right: '-8%',
+                  width: '820px',
+                  height: '820px',
+                  background: 'radial-gradient(circle, rgba(20, 184, 166, 0.16) 0%, transparent 68%)',
+                  filter: 'blur(92px)',
+                  opacity: 0.98
+                }}
+              />
+
+              <motion.div
+                animate={{
+                  x: [0, -30, 30, 0],
+                  y: [0, 20, -20, 0],
+                }}
+                transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+                style={{
+                  position: 'absolute',
+                  bottom: '-8%',
+                  left: '-6%',
+                  width: '520px',
+                  height: '520px',
+                  background: 'radial-gradient(circle, rgba(45, 212, 191, 0.10) 0%, transparent 70%)',
+                  filter: 'blur(72px)',
+                  opacity: 0.95
                 }}
               />
             </div>

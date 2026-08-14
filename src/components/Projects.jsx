@@ -103,7 +103,9 @@ const projectsData = [
         'Fully Responsive Design'
     ],
     tech: ['HTML', 'CSS', 'JavaScript', 'VS Code'],
-    learnings: 'Improved my web design fundamentals and learned how to present large amounts of visual information in a clean, professional way.'
+    learnings: 'Improved my web design fundamentals and learned how to present large amounts of visual information in a clean, professional way.',
+    link: 'https://ljcode-17.github.io/loterinaArtAppre/visualart.html',
+    linkText: 'View Website'
   },
   {
     id: 3,

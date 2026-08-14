@@ -19,17 +19,17 @@
 }
 
 [data-theme='light'] {
-  /* Improved Light Theme Variables */
-  --bg: #FFFFFF;
-  --bg-subtle: #F8FAFC; 
-  --text: #0F172A;
+  --bg: #f3f6f8;
+  --bg-subtle: #e8eef3;
+  --text: #0f172a;
   --text-muted: #475569;
-  --border: #E2E8F0;
-  --card-bg: #FFFFFF;
-  --nav-bg: rgba(255, 255, 255, 0.95);
-  --pattern-opacity: 0.1;
-  --shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.07), 0 2px 6px -2px rgba(0, 0, 0, 0.05);
-  --section-sep: #F1F5F9;
+  --border: rgba(15, 23, 42, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.84);
+  --nav-bg: rgba(248, 250, 252, 0.88);
+  --pattern-opacity: 0.12;
+  --shadow: 0 22px 42px -28px rgba(15, 23, 42, 0.24), 0 10px 24px -16px rgba(20, 184, 166, 0.12);
+  --section-sep: rgba(15, 23, 42, 0.08);
+  --soft-gradient: linear-gradient(135deg, rgba(255,255,255,0.94), rgba(235,242,247,0.9));
 }
 
 * {
@@ -53,6 +53,12 @@ body {
   position: relative;
 }
 
+[data-theme='light'] body {
+  background: radial-gradient(circle at top left, rgba(20, 184, 166, 0.07), transparent 28%),
+              radial-gradient(circle at bottom right, rgba(45, 212, 191, 0.06), transparent 24%),
+              linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);
+}
+
 /* Texture Pattern */
 body::before {
   content: "";
@@ -69,12 +75,56 @@ body::before {
   transition: opacity 0.4s ease;
 }
 
+[data-theme='light'] body::before {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px), radial-gradient(rgba(20, 184, 166, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
 /* Section Separation */
 section {
   position: relative;
   z-index: 1;
   border-bottom: 1px solid var(--section-sep);
   padding: 120px 5%;
+}
+
+[data-theme='light'] section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.38), rgba(241, 246, 250, 0.9));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+[data-theme='light'] .btn-primary {
+  box-shadow: 0 12px 24px -16px rgba(20, 184, 166, 0.75);
+}
+
+[data-theme='light'] .btn-secondary {
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.05), 0 6px 16px -14px rgba(15, 23, 42, 0.18);
+}
+
+[data-theme='light'] .btn-secondary:hover {
+  background: rgba(20, 184, 166, 0.06);
+  box-shadow: 0 10px 20px -16px rgba(20, 184, 166, 0.45);
+}
+
+[data-theme='light'] .project-card,
+[data-theme='light'] .education-logo-card,
+[data-theme='light'] [role='dialog'] {
+  box-shadow: 0 24px 44px -30px rgba(15, 23, 42, 0.24), 0 12px 22px -16px rgba(20, 184, 166, 0.12);
+}
+
+[data-theme='light'] .project-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(247,250,252,0.96));
+}
+
+[data-theme='light'] [role='dialog'] {
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(244,248,250,0.98));
+}
+
+[data-theme='light'] a,
+[data-theme='light'] button {
+  transition: all 0.25s ease;
 }
 
 @media (max-width: 768px) {

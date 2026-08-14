@@ -48,7 +48,7 @@ export default function Navbar({ theme, toggleTheme }) {
       }}
     >
       <a href="#home" style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--text)', textDecoration: 'none' }}>
-        <span style={{ color: 'var(--accent)' }}>L</span>CL
+        <span style={{ color: 'var(--accent)' }}>LJ</span><span style={{ color: 'var(--text)', marginLeft: '4px' }}>CL</span>
       </a>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>

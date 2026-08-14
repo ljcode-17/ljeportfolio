@@ -5,11 +5,11 @@ const skillCategories = [
   {
     title: "Frontend & UI/UX Design",
     desc: "Crafting visually engaging and user-centered digital interfaces.",
-    chips: ["React JS", "HTML, CSS & JavaScript", "Figma", "Responsive Web Design", "Adobe Photoshop"]
+    chips: ["React JS", "HTML, CSS & JavaScript", "Figma", "Responsive Web Design"]
   },
   {
     title: "Systems & Programming",
-    chips: ["C#, Java, Python, C++", "SSMS", "MySQL", "Firebase", "SQL (Basic)", "Microsoft Access"]
+    chips: ["C#, Java, Python, C++", "SSMS", "MySQL", "Firebase", "SQL (Basic)", "Microsoft Access", "Basic Laravel Filament"]
   },
   {
     title: "IT Support & Troubleshooting",

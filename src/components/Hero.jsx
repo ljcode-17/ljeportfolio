@@ -42,7 +42,7 @@ export default function Hero() {
               fontWeight: 600,
               marginBottom: '1.5rem',
               border: '1px solid rgba(20, 184, 166, 0.2)'
-            }}>Information Technology Student</span>
+            }}>Information Technology Graduate</span>
           </motion.div>
 
           <motion.h1

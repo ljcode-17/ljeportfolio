@@ -13,7 +13,7 @@ const education = [
       "Academic Awardee (S.Y. 2022–2023)",
       "Academic Awardee (S.Y. 2023–2024)",
       "Academic Awardee (S.Y. 2025–2026)",
-      "1st Placer — Southern Tagalog Consortium for Industry, Energy, and Emerging Technology Research and Development (STCIEERD) — 2nd Undergraduate R&D Category (for capstone project MATHtatag)",
+      "1st Place — Southern Tagalog Consortium for Industry, Energy, and Emerging Technology Research and Development (STCIEERD), 2nd Undergraduate R&D Category — \"MATHtatag\": Grade-1 math assessment app with performance monitoring and Filipino text-to-speech. Event held at Batangas State University, Alangilan Campus.",
       "2nd Placer — 7th Multi-Disciplinary In-House Review and Research Colloquium (PUP Lopez Campus), Architecture, Engineering & Technology Category (2026)"
     ]
   },

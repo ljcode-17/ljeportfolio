@@ -35,22 +35,50 @@ export default function LoadingScreen({ onComplete }) {
         color: '#F1F5F9'
       }}
     >
-      <motion.h1 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        style={{ fontSize: '2rem', letterSpacing: '0.2em', marginBottom: '2rem' }}
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: [0.95, 1.03, 1], opacity: 1 }}
+        transition={{ duration: 0.9, ease: 'easeInOut' }}
+        style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '1.5rem' }}
       >
-        L C L
-      </motion.h1>
-      <div style={{ width: '200px', height: '2px', background: '#334155', overflow: 'hidden' }}>
         <motion.div
-          style={{ height: '100%', background: '#14B8A6' }}
+          animate={{ rotate: [0, 10, -10, 0] }}
+          transition={{ repeat: Infinity, duration: 2.4, ease: 'easeInOut' }}
+          style={{
+            width: 78,
+            height: 78,
+            borderRadius: 14,
+            background: 'linear-gradient(180deg, var(--accent), var(--accent-hover))',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 12px 34px rgba(20,184,166,0.18)'
+          }}
+        >
+          <div style={{ color: 'white', fontWeight: 900, fontSize: '1.15rem', letterSpacing: '-0.02em' }}>LJCL</div>
+        </motion.div>
+
+        <div style={{ textAlign: 'left' }}>
+          <motion.h1
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            style={{ fontSize: '1.25rem', margin: 0, fontWeight: 800, color: '#F1F5F9' }}
+          >
+            Lloyd Loteriña
+          </motion.h1>
+          <div style={{ fontSize: '0.85rem', color: '#94A3B8' }}>Portfolio</div>
+        </div>
+      </motion.div>
+
+      <div style={{ width: '260px', height: '6px', background: '#1f2937', borderRadius: 6, overflow: 'hidden' }}>
+        <motion.div
+          style={{ height: '100%', background: 'linear-gradient(90deg, rgba(20,184,166,0.95), rgba(20,184,166,0.6))' }}
           initial={{ width: '0%' }}
           animate={{ width: `${progress}%` }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.25 }}
         />
       </div>
-      <div style={{ marginTop: '1rem', fontSize: '0.8rem', color: '#94A3B8' }}>
+      <div style={{ marginTop: '0.9rem', fontSize: '0.85rem', color: '#94A3B8' }}>
         {Math.min(progress, 100)}%
       </div>
     </motion.div>

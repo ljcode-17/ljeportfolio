@@ -6,7 +6,7 @@ export default function About() {
     { 
       icon: "🎨", 
       title: "Who I Am", 
-      desc: "An IT student with a strong passion for Frontend Development, UI/UX Design, and technical problem-solving. I focus on creating intuitive, visually engaging, and user-centered digital experiences." 
+      desc: "An Information Technology Graduate with a strong passion for Frontend Development, UI/UX Design, and technical problem-solving. I focus on creating intuitive, visually engaging, and user-centered digital experiences."
     },
     { 
       icon: "✨", 
