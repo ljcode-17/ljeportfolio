@@ -214,8 +214,8 @@ export default function Projects() {
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-20px" }}
+        transition={{ duration: 0.45, ease: "easeOut" }}
       >
         <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', textAlign: 'center', marginBottom: '3rem', color: 'var(--text)' }}>
           Featured <span style={{ color: 'var(--accent)' }}>Projects</span>
@@ -226,7 +226,7 @@ export default function Projects() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.35, delay: 0.05 }}
           style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '4rem', flexWrap: 'wrap' }}
         >
           {filters.map(f => (
@@ -269,9 +269,9 @@ export default function Projects() {
                 layout
                 initial={{ opacity: 0, y: 50, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true, margin: "-20px" }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
+                transition={{ duration: 0.35, delay: index * 0.04 }}
                 whileHover={{ y: -10 }}
                 onClick={() => setSelectedProject(project)}
                 className="project-card"

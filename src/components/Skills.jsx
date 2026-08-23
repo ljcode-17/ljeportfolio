@@ -17,7 +17,7 @@ const skillCategories = [
   },
   {
     title: "Tools & Productivity",
-    chips: ["GitHub", "Sourcetree", "Postman", "Visual Studio / Code", "ClickUp", "Make AI Tools", "Technical Writing"]
+    chips: ["GitHub", "Sourcetree", "Postman", "Visual Studio / Code", "ClickUp", "Make AI Tools", "Generative AI / AI-Assisted Development", "Technical Writing"]
   }
 ];
 
@@ -27,8 +27,8 @@ export default function Skills() {
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-20px" }}
+        transition={{ duration: 0.45, ease: "easeOut" }}
       >
         <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', textAlign: 'center', marginBottom: '1rem', color: 'var(--text)' }}>
           Technical <span style={{ color: 'var(--accent)' }}>Expertise</span>
@@ -49,8 +49,8 @@ export default function Skills() {
               key={index}
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-20px" }}
+              transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
               whileHover={{ y: -5, borderColor: 'var(--accent)' }}
               style={{
                 background: 'var(--card-bg)',

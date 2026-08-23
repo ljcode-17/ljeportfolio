@@ -16,8 +16,8 @@ export default function Awards() {
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-20px" }}
+        transition={{ duration: 0.45, ease: "easeOut" }}
       >
         <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', textAlign: 'center', marginBottom: '4rem', color: 'var(--text)' }}>
           Awards & <span style={{ color: 'var(--accent)' }}>Achievements</span>
@@ -35,8 +35,8 @@ export default function Awards() {
               key={index}
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-20px" }}
+              transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
               whileHover={{ y: -10, borderColor: 'var(--accent)' }}
               style={{
                 display: 'flex',

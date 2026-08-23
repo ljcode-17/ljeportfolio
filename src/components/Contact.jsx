@@ -40,8 +40,8 @@ export default function Contact() {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-20px" }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
           style={{ textAlign: 'center', marginBottom: '4rem' }}
         >
           <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', marginBottom: '1.5rem', color: 'var(--text)' }}>
@@ -58,7 +58,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
           >
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
@@ -117,7 +117,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             style={{ 
               background: 'var(--card-bg)', 
               padding: '2.5rem', 
@@ -249,7 +249,7 @@ export default function Contact() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.8 }}
+          transition={{ duration: 0.45, delay: 0.1 }}
           style={{ marginTop: '5rem', borderTop: '1px solid var(--border)', paddingTop: '2rem', color: 'var(--text-muted)', fontSize: '0.9rem', textAlign: 'center' }}
         >
           &copy; {new Date().getFullYear()} Lloyd Jernell Loteriña. Cinematic Web Portfolio.

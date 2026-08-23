@@ -30,7 +30,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.45, delay: 0.1 }}
           >
             <span style={{
               display: 'inline-block',
@@ -48,7 +48,7 @@ export default function Hero() {
           <motion.h1
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
+            transition={{ duration: 0.45, delay: 0.2 }}
             style={{
               fontSize: 'clamp(2.2rem, 8vw, 5rem)',
               fontWeight: 900,
@@ -65,7 +65,7 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
+            transition={{ duration: 0.45, delay: 0.3 }}
             style={{
               fontSize: 'clamp(1rem, 4vw, 1.2rem)',
               color: 'var(--text-muted)',
@@ -79,7 +79,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.1 }}
+            transition={{ duration: 0.45, delay: 0.4 }}
             style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}
             className="hero-btns"
           >
@@ -123,7 +123,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.3 }}
+            transition={{ duration: 0.45, delay: 0.5 }}
             style={{ display: 'flex', gap: '2rem', marginTop: '3rem', borderTop: '1px solid var(--border)', paddingTop: '2rem' }}
             className="hero-stats"
           >
@@ -145,7 +145,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 1, delay: 0.8, type: "spring", bounce: 0.4 }}
+          transition={{ duration: 0.55, delay: 0.2, type: "spring", bounce: 0.25 }}
           style={{
             flex: '1 1 300px',
             display: 'flex',

@@ -32,8 +32,8 @@ export default function Experience() {
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-20px" }}
+        transition={{ duration: 0.45, ease: "easeOut" }}
         style={{ maxWidth: '800px', margin: '0 auto' }}
       >
         <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', textAlign: 'center', marginBottom: '4rem', color: 'var(--text)' }}>
@@ -48,8 +48,8 @@ export default function Experience() {
               key={index}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-20px" }}
+              transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
               style={{ position: 'relative', paddingLeft: '60px', marginBottom: '40px' }}
             >
               <div style={{

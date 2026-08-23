@@ -23,13 +23,22 @@ export default function Navbar({ theme, toggleTheme }) {
     }
   }, [mobileOpen]);
 
-  const navItems = ['Home', 'About', 'Education', 'Skills', 'Projects', 'Awards', 'Experience', 'Contact'];
+  const navItems = [
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#about' },
+    { label: 'Technical Expertise', href: '#skills' },
+    { label: 'Education', href: '#education' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Awards', href: '#awards' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Contact', href: '#contact' }
+  ];
 
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.4 }}
       style={{
         position: 'fixed',
         top: 0,
@@ -56,8 +65,8 @@ export default function Navbar({ theme, toggleTheme }) {
         <nav className="desktop-nav" style={{ display: 'flex', gap: '1.5rem' }}>
           {navItems.map((item) => (
             <motion.a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               whileHover={{ y: -2, color: 'var(--accent)' }}
               style={{
                 textDecoration: 'none',
@@ -67,7 +76,7 @@ export default function Navbar({ theme, toggleTheme }) {
                 transition: 'color 0.3s'
               }}
             >
-              {item}
+              {item.label}
             </motion.a>
           ))}
         </nav>
@@ -122,11 +131,11 @@ export default function Navbar({ theme, toggleTheme }) {
           >
             {navItems.map((item, index) => (
               <motion.a
-                key={item}
+                key={item.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                href={`#${item.toLowerCase()}`}
+                transition={{ delay: index * 0.04 }}
+                href={item.href}
                 onClick={() => setMobileOpen(false)}
                 style={{
                   textDecoration: 'none',
@@ -137,7 +146,7 @@ export default function Navbar({ theme, toggleTheme }) {
                 }}
                 whileHover={{ color: 'var(--accent)', x: 10 }}
               >
-                {item}
+                {item.label}
               </motion.a>
             ))}
           </motion.div>
