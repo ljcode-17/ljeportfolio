@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import LoadingScreen from './components/LoadingScreen';
 import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
@@ -9,7 +9,6 @@ import About from './components/About';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Awards from './components/Awards';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 
@@ -34,60 +33,39 @@ function App() {
       </AnimatePresence>
 
       {!loading && (
-        <div style={{ position: 'relative' }}>
-          <Navbar theme={theme} toggleTheme={toggleTheme} />
-          
-          {/* Dynamic Background Elements */}
-          <Hero3D theme={theme} />
-          
+        <div className="aura-bg" data-theme={theme}>
           {theme === 'light' && (
-            <div style={{ position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
-              <motion.div
-                animate={{
-                  x: [0, 60, -60, 0],
-                  y: [0, -36, 36, 0],
-                }}
-                transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-                style={{
-                  position: 'absolute',
-                  top: '-15%',
-                  right: '-8%',
-                  width: '820px',
-                  height: '820px',
-                  background: 'radial-gradient(circle, rgba(20, 184, 166, 0.16) 0%, transparent 68%)',
-                  filter: 'blur(92px)',
-                  opacity: 0.98
-                }}
-              />
-
-              <motion.div
-                animate={{
-                  x: [0, -30, 30, 0],
-                  y: [0, 20, -20, 0],
-                }}
-                transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
-                style={{
-                  position: 'absolute',
-                  bottom: '-8%',
-                  left: '-6%',
-                  width: '520px',
-                  height: '520px',
-                  background: 'radial-gradient(circle, rgba(45, 212, 191, 0.10) 0%, transparent 70%)',
-                  filter: 'blur(72px)',
-                  opacity: 0.95
-                }}
-              />
-            </div>
+            <>
+              <div className="aura-layer-1" aria-hidden="true" />
+              <div className="aura-layer-2" aria-hidden="true" />
+              <div className="aura-layer-3" aria-hidden="true" />
+              <div className="aura-layer-4" aria-hidden="true" />
+              <div className="aura-grain" aria-hidden="true">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                  <filter id="aura-grain-filter">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="4" stitchTiles="stitch" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0.181 0.608 0.061 0 0.075 0.181 0.608 0.061 0 0.075 0.181 0.608 0.061 0 0.075 0 0 0 1 0"
+                    />
+                  </filter>
+                  <rect width="100%" height="100%" filter="url(#aura-grain-filter)" />
+                </svg>
+              </div>
+            </>
           )}
 
-          <Hero />
-          <About />
-          <Skills />
-          <Education />
-          <Projects />
-          <Awards />
-          <Experience />
-          <Contact />
+          <div className="aura-content">
+            <Navbar theme={theme} toggleTheme={toggleTheme} />
+            <Hero3D theme={theme} />
+            <Hero theme={theme} />
+            <About />
+            <Projects />
+            <Skills />
+            <Education />
+            <Experience />
+            <Contact />
+          </div>
         </div>
       )}
     </>

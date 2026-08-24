@@ -25,7 +25,10 @@ export default function ProjectModal({ project, isOpen, onClose }) {
       {isOpen && (
         <div style={{
           position: 'fixed',
-          inset: 0,
+          top: '72px',
+          right: 0,
+          bottom: 0,
+          left: 0,
           zIndex: 10000,
           display: 'flex',
           alignItems: 'center',
@@ -58,7 +61,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
               position: 'relative',
               width: '100%',
               maxWidth: '800px',
-              maxHeight: 'min(82vh, 780px)',
+              maxHeight: '100%',
               display: 'flex',
               flexDirection: 'column',
               background: 'var(--bg)',

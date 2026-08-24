@@ -1,7 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
-export default function Hero() {
+export default function Hero({ theme }) {
   return (
     <section id="home" style={{ 
       position: 'relative', 
@@ -175,16 +175,25 @@ export default function Hero() {
               zIndex: 1,
               pointerEvents: 'none'
             }} />
-            <img 
-              src="/assets/lj.png" 
-              alt="Lloyd Jernell Loteriña" 
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                filter: 'contrast(1.1) brightness(0.9)'
-              }}
-            />
+            <AnimatePresence initial={false} mode="sync">
+              <motion.img
+                key={theme}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
+                src={theme === 'light' ? '/assets/lj3.jpg' : '/assets/lj2.png'}
+                alt="Lloyd Jernell Loteriña"
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  filter: 'contrast(1.1) brightness(0.9)'
+                }}
+              />
+            </AnimatePresence>
           </motion.div>
         </motion.div>
       </div>

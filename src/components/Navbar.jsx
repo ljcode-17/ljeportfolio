@@ -14,22 +14,24 @@ export default function Navbar({ theme, toggleTheme }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
+    const previousOverflowY = document.body.style.overflowY;
+
     if (mobileOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflowY = 'hidden';
     }
+
+    return () => {
+      document.body.style.overflowY = previousOverflowY;
+    };
   }, [mobileOpen]);
 
   const navItems = [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
+    { label: 'Projects', href: '#projects' },
     { label: 'Technical Expertise', href: '#skills' },
     { label: 'Education', href: '#education' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Awards', href: '#awards' },
     { label: 'Experience', href: '#experience' },
     { label: 'Contact', href: '#contact' }
   ];
